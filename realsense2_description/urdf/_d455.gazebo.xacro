@@ -31,7 +31,7 @@ This is the Gazebo URDF model for the Intel RealSense D455 camera
         <camera name="${camera_name}">
           <horizontal_fov>${69.4*deg_to_rad}</horizontal_fov>
           <image>
-            <width>640</width>
+            <width>848</width>
             <height>480</height>
             <format>RGB_INT8</format>
           </image>
@@ -53,8 +53,8 @@ This is the Gazebo URDF model for the Intel RealSense D455 camera
         <camera name="${camera_name}">
           <horizontal_fov>${85.2*deg_to_rad}</horizontal_fov>
           <image>
-            <width>1280</width>
-            <height>720</height>
+            <width>848</width>
+            <height>480</height>
             <format>L_INT8</format>
           </image>
           <clip>
@@ -75,8 +75,8 @@ This is the Gazebo URDF model for the Intel RealSense D455 camera
         <camera name="${camera_name}">
           <horizontal_fov>${85.2*deg_to_rad}</horizontal_fov>
           <image>
-            <width>1280</width>
-            <height>720</height>
+            <width>848</width>
+            <height>480</height>
             <format>L_INT8</format>
           </image>
           <clip>
@@ -97,8 +97,8 @@ This is the Gazebo URDF model for the Intel RealSense D455 camera
         <camera name="${camera_name}">
           <horizontal_fov>${85.2*deg_to_rad}</horizontal_fov>
           <image>
-            <width>1280</width>
-            <height>720</height>
+            <width>848</width>
+            <height>480</height>
           </image>
           <clip>
             <near>0.1</near>
@@ -119,9 +119,9 @@ This is the Gazebo URDF model for the Intel RealSense D455 camera
     <gazebo>
       <plugin name="${topics_ns}" filename="librealsense_gazebo_plugin.so">
         <prefix>${camera_name}</prefix>
-        <depthUpdateRate>30.0</depthUpdateRate>
-        <colorUpdateRate>30.0</colorUpdateRate>
-        <infraredUpdateRate>30.0</infraredUpdateRate>
+        <depthUpdateRate>90.0</depthUpdateRate>
+        <colorUpdateRate>90.0</colorUpdateRate>
+        <infraredUpdateRate>90.0</infraredUpdateRate>
         <depthTopicName>depth/image_raw</depthTopicName>
         <depthCameraInfoTopicName>depth/camera_info</depthCameraInfoTopicName>
         <colorTopicName>color/image_raw</colorTopicName>
@@ -134,7 +134,7 @@ This is the Gazebo URDF model for the Intel RealSense D455 camera
         <depthOpticalframeName>${depth_optical_frame}</depthOpticalframeName>
         <infrared1OpticalframeName>${infrared1_optical_frame}</infrared1OpticalframeName>
         <infrared2OpticalframeName>${infrared2_optical_frame}</infrared2OpticalframeName>
-        <rangeMinDepth>0.2</rangeMinDepth>
+        <rangeMinDepth>0.35</rangeMinDepth>
         <rangeMaxDepth>10.0</rangeMaxDepth>
         <pointCloud>${publish_pointcloud}</pointCloud>
         <pointCloudTopicName>depth/color/points</pointCloudTopicName>
@@ -142,6 +142,5 @@ This is the Gazebo URDF model for the Intel RealSense D455 camera
         <pointCloudCutoffMax>9.0</pointCloudCutoffMax>
       </plugin>
     </gazebo>
-
   </xacro:macro>
 </robot>
